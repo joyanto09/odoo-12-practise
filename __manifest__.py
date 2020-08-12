@@ -1,10 +1,10 @@
 {
-    'name': 'Odoo 12 Practise Work',
+    'name': 'Odoo 12 Practise Work For Git',
     'summary': """This module will Practise""",
     'version': '1.0.0.0',
     'description': """This module will test work
 
-        By Joyanto """,
+        By Joyanto Git """,
     'author': 'Metamorphosis',
     'company': 'Metamorphosis Ltd.',
     'website': 'http://www.metamorphosis.com.bd',

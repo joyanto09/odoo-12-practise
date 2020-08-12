@@ -12,4 +12,4 @@ class SaleWork(models.Model):
         res = super(SaleWork, self).action_confirm()
         return res
 
-    sale_order = fields.Char(string="Sale Order")
+    sale_order = fields.Char(string="Sale Order practise")
