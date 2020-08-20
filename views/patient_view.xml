@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Tree View of Customer-->
+    <record id="patient_tree_view" model="ir.ui.view">
+        <field name="name">patient.tree.view</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <tree string="Patient Information" default_order='date desc'>
+                <field name="name" invisible=""/>
+                <field name="contact_no"/>
+                <field name="date"/>
+                <field name="patient_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="patient_form_view" model="ir.ui.view">
+        <field name="name">patient.form.view</field>
+        <field name="model">hospital.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                 <sheet>
+                     <group>
+                        <group>
+                            <field name="name" placeholder=""/>
+                            <field name="contact_no" placeholder=""/>
+                        </group>
+                        <group>
+                            <field name="date" placeholder=""/>
+                            <field name="patient_id" placeholder=""/>
+                        </group>
+                     </group>
+                 </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--action of the patient menu-->
+    <record id="action_patient" model="ir.actions.act_window">
+        <field name="name">Patient</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.patient</field>
+<!--        <field name="view_type">form</field>-->
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create your First Patient !
+          </p>
+        </field>
+    </record>
+
+    <menuitem name="Hospital"
+              id="hospital_root_menu"
+              sequence="5"/>
+
+    <menuitem name="Hospital Patient"
+              parent="hospital_root_menu"
+              id="hospital_patient_menu"
+              action="action_patient"
+              sequence="1"/>
+
+<!--    <menuitem name="Customer Registration Form"-->
+<!--              parent="customer"-->
+<!--              id="customer_details"-->
+<!--              action="customer_action"-->
+<!--              sequence="1"/>-->
+
+
+</odoo>

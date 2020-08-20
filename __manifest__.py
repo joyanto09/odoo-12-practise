@@ -12,7 +12,10 @@
     'depends': ['base', 'sale'],
     'licence': 'OPL-1',
     'data': [
-        # 'views/basb_menu_view.xml',
+        'security/ir.model.access.csv',
+
+        'views/patient_view.xml',
+        'views/appointment_view.xml',
         'views/server_action.xml',
         # 'data/data_home.xml',
     ],
