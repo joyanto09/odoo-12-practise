@@ -13,7 +13,7 @@
     'licence': 'OPL-1',
     'data': [
         # 'views/basb_menu_view.xml',
-        # 'views/dasboard_views.xml',
+        'views/server_action.xml',
         # 'data/data_home.xml',
     ],
     'demo': [],
