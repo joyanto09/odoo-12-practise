@@ -24,4 +24,10 @@ class SaleWork(models.Model):
             'type': 'ir.actions.act_window',
         }
 
+    @api.multi
+    def write(self, vals):
+        res = super(SaleWork, self).write(vals)
+        print("Test Write Function...")
+        return res
+
     sale_order = fields.Char(string="Sale Order practise")

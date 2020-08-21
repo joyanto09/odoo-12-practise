@@ -3,6 +3,7 @@ from datetime import datetime, date
 
 class HospitalPatient(models.Model):
     _name = "hospital.patient"
+    _description = "Hospital Patient"
 
     @api.multi
     def name_get(self):
@@ -11,6 +12,7 @@ class HospitalPatient(models.Model):
         for rec in self:
             res.append((rec.id, '%s - %s' % (rec.patient_id, rec.name)))
         return res
+
 
 
     name = fields.Char(string="Name")
